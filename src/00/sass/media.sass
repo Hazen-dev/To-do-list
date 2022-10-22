@@ -71,8 +71,10 @@
         &__left-bar-true
         &__right-bar
             //display: block
-@media only screen and (min-width: 1360px) and (min-height: 663px) //Laptops
-
+@media only screen and (min-width: 1360px) and (min-height: 803px) //Laptops
+    .content
+        &__add
+            display: flex
 @media only screen and (min-width: 1920px) //PC
     .header
         &__pc-menu
@@ -97,6 +99,13 @@
         &__left-menu-item:hover
             transform: scale(1.3)
             background: $button-darker
+
+        &__field
+            margin-top: 9.5rem
+        &__tasks
+            margin-left: 0
+        &__field-content
+            margin-left: 0
 //  SPECIFIC
 @media only screen and (min-width: 1300px) and (min-height: 700px)
     .content

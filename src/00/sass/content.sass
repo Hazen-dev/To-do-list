@@ -1,4 +1,6 @@
 @import 'var'
+.--nomargin
+    margin: 0
 .content
     height: calc(100vh - 67px - 4.1rem)
     padding-top: 3rem
@@ -11,14 +13,16 @@
         width: 100%
         grid-template-rows: 1fr
         height: calc(100vh - 67px - 4.1rem)
+        pointer-events: none
 
     // LEFT
 
     &__left-bar //flex | section
-
+        pointer-events: all
         align-items: center
         justify-content: center
         height: 80%
+        z-index: 10
     &__left-bar-true //left floating div
         @include margin(true, false)
         width: 80%
@@ -61,6 +65,8 @@
         opacity: 100%
         margin-right: 1rem
         height: 95%
+        pointer-events: all
+        z-index: 2
     &__right-bar-true //right floting div
         width: 90%
         margin: 1rem 0 0 0
@@ -78,13 +84,29 @@
         color: black
 
     // MIDDLE
-
+    &__add
+        color: white
+        background: $blue
+        margin-top: 74vh
+        margin-right: 2rem
+        padding: 2rem
+        width: 1rem
+        height: 1rem
+        text-align: center
+        border-radius: 100px
+        display: none
+        align-items: center
+        justify-content: center
+        transition: 1s
+    &__add:hover
+        transform: scale(0.8)
     &__middle
         display: flex
         flex-direction: column
         margin: 0 1rem
         padding: 0 0 1.6rem 0
         height: fit-content
+        pointer-events: all
     &__title
         font-size: 2rem
         margin: .9rem 0
@@ -156,6 +178,7 @@
     &__right-subtasks
         margin-top: 1rem
         overflow: scroll
+        overflow-x: hidden
         max-height: calc(50vh -  12rem)
     &__right-task-title
         display: inline-block
@@ -204,13 +227,61 @@
                 margin-left: 10rem
                 width: 30rem
     &__field
-        margin-top: 5.5rem
+        overflow: auto
+        overflow-y: hidden
+        margin-top: 7.5rem
         height: calc(100vh - 67px - 4.1rem - 5.5rem)
         //background-image: url("../imgs/pappiez.png")
     &__field-content
-        height: 100%
+        height: auto
         display: grid
-        grid-auto-rows: 1fr
-        grid-template-columns: repeat(30, 4rem)
-        overflow: auto
-        background: red
+        margin-left: 5rem
+        margin-bottom: 2rem
+        // grid-template-columns: repeat(30, 4rem)
+        // grid-template-rows: 5rem repeat(3, 1fr)
+        grid-template-columns: repeat(99, 8rem)
+        grid-template-rows: 5rem repeat(0, 4rem)
+    
+    &__day-section
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__field-day //inside day section
+        margin-bottom: .3rem
+    &__tasks
+        height: 20rem
+        position: relative
+        width: 300rem
+        margin-left: 5rem
+        z-index: 1
+
+
+.task //test class of task
+
+    font-size: 1.2rem
+    box-shadow: 8px 8px 24px 0px #bebebe
+    line-height: 1.5rem
+    height: 4rem //base value
+    border-radius: 30px
+    width: 16rem  //base value
+    background: #e76e6e
+    display: inline-block  
+    position: absolute
+    transition: 1s
+    &__text
+        margin-left: 1rem
+        color: white
+.task:hover
+    transform: scale(1.08)
+
+.task--1
+    width: 16rem
+    margin-left: calc(4rem)
+.task--2
+    width: 24rem
+    margin-left: calc(4rem + 4rem * 8) //column of days
+    background: rgb(2,0,36)
+    background: linear-gradient(153deg, #170dce 0%, #5050ad 35%, rgba(0,212,255,1) 100%)
+    margin-top: calc(4rem  +  1rem) //row of elements
+
+    // content__add is button
