@@ -1,0 +1,216 @@
+@import 'var'
+.content
+    height: calc(100vh - 67px - 4.1rem)
+    padding-top: 3rem
+    background: #F6F7FC
+    position: relative
+    border-radius: 0 0 30px 30px
+    &__ui //container of floating ui
+        display: grid   
+        position: absolute
+        width: 100%
+        grid-template-rows: 1fr
+        height: calc(100vh - 67px - 4.1rem)
+
+    // LEFT
+
+    &__left-bar //flex | section
+
+        align-items: center
+        justify-content: center
+        height: 80%
+    &__left-bar-true //left floating div
+        @include margin(true, false)
+        width: 80%
+        height: 90%
+        border-radius: 40px
+        background: white
+        -webkit-box-shadow: 8px 8px 24px 0px rgba(43, 43, 45, 1)
+        -moz-box-shadow: 8px 8px 24px 0px rgba(43, 43, 45, 1)
+        box-shadow: 4px 20px 30px -24px rgb(43, 43, 43, 1)
+    &__left-bar-top //icons top and bottom
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        align-items: center
+        height: 70%
+    &__left-bar-bottom
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        align-items: center
+        height: 25%
+    &__left-menu-item
+        width: 55%
+        background: #F8F9FB
+        border-radius: 30px
+        padding: .3rem
+        transition: 1s
+    &__left-menu-item:hover
+        transform: scale(0.85)
+        background: $button-darker
+
+    // RIGHT
+
+    &__right-bar //section
+        background: white
+        -webkit-box-shadow: 0px 0px 71px -44px rgba(0, 0, 0, 1)
+        -moz-box-shadow: 0px 0px 71px -44px rgba(0, 0, 0, 1)
+        box-shadow: 0px 0px 71px -44px rgba(0, 0, 0, 1)
+        border-radius: 30px
+        opacity: 100%
+        margin-right: 1rem
+        height: 95%
+    &__right-bar-true //right floting div
+        width: 90%
+        margin: 1rem 0 0 0
+        @include margin(true)
+        height: calc(100vh - 67px - 89.1rem)
+        height: 77vh
+    &__right-bar
+
+    
+    &__right-top-texts
+        display: flex
+        @include margin(true, false)
+        align-items: center
+        justify-content: space-between
+        color: black
+
+    // MIDDLE
+
+    &__middle
+        display: flex
+        flex-direction: column
+        margin: 0 1rem
+        padding: 0 0 1.6rem 0
+        height: fit-content
+    &__title
+        font-size: 2rem
+        margin: .9rem 0
+    &__callendar-btn
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 7rem
+        height: 2.3rem
+        border-radius: 100px
+        border: none
+        background: $button-darker
+        color: $grey
+        box-shadow: 12px 4px 20px -16px rgba(45, 76, 140, 1)
+        transition: .7s
+    &__callendar-btn:hover
+        transform: scale(1.05)
+        box-shadow: 12px 6px 20px -13px #494949
+    &__callendar-btn-img //arrow of btn
+        //margin-top: -0.2rem
+        padding: .4rem
+        background: $button-back
+        border-radius: 100px
+        margin-left: 0.3rem
+        box-shadow: 4px 4px 15px -6px #626c8b
+
+    &__right-title2
+        font-size: 0.8rem
+        color: grey
+        font-weight: 400
+
+    // HOUR SECTION
+    &__right-hour
+        display: flex
+        height: auto
+        align-items: center
+        justify-content: space-around
+        width: 80%
+        max-width: 20vw
+    &__right-hour-hour
+        font-size: 3rem
+        color: black
+    &__right-hour-span
+        display: block
+        background: #9E63FF
+        width: 5px
+        height: 7rem
+        border-radius: 30px
+    &__right-hour-title
+        font-size: 1.4rem
+        color: grey
+    &__right-hour-category
+        font-size: 1rem
+
+    // TOOLS
+    &__right-tools
+    &__right-tools-title
+        font-weight: 600
+    &__right-tools-img
+        height: auto
+        width: 50px
+        margin: 0 .4rem
+
+    // SUBTASKS
+    &__right-subtasks-title
+        font-weight: 600
+        color: $grey
+        margin-top: 0
+    &__right-subtasks
+        margin-top: 1rem
+        overflow: scroll
+        max-height: calc(50vh -  12rem)
+    &__right-task-title
+        display: inline-block
+        width: 84%
+        color: $grey
+        font-weight: 600
+        margin-left: 1rem
+    &__right-task-checkbox
+        display: inline-block
+        height: 2rem
+        width: 2rem
+        background: $blue
+        border: 1px $blue solid
+        border-radius: 30px
+        position: relative
+        transition: 1s
+    &__right-task-checkbox-img
+        height: auto
+        width: 20px
+        position: absolute
+        left: 18%
+        top: 19.5%
+        opacity: 0.8
+
+    // &__right-task-checkbox:hover //CLASS FOR COMPLETED TASK
+    //     background: #ffffff00
+
+    &__right-task-all
+        display: flex
+        align-items: center
+        border: 2px solid $blue-light
+        border-radius: 30px
+        height: 3rem
+        margin: 1rem 0
+    @media only screen and (min-width: 1360px) and (min-height: 663px) //Laptops
+        .content
+            &__middle
+                flex-direction: row
+                align-content: center
+            &__callendar-btn
+                margin: 1.5rem 1rem 0 auto
+                width: 9rem
+                
+        // FIELD (menu)
+            &__table
+                margin-left: 10rem
+                width: 30rem
+    &__field
+        margin-top: 5.5rem
+        height: calc(100vh - 67px - 4.1rem - 5.5rem)
+        //background-image: url("../imgs/pappiez.png")
+    &__field-content
+        height: 100%
+        display: grid
+        grid-auto-rows: 1fr
+        grid-template-columns: repeat(30, 4rem)
+        overflow: auto
+        background: red

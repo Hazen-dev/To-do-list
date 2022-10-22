@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HazenDev</title>
+    <link rel="stylesheet" href="./sass/style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Poppins:wght@100;200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <img src="./imgs/Logo.svg" alt="page logo" class="header__logo" />
+        <textarea
+          class="fa header__search-bar"
+          id="header__search-bar"
+          placeholder="&#xf002; Search... "
+        ></textarea>
+        <section class="header__pc-menu">
+          <img
+            src="./imgs/bar-icons/Calendar.svg"
+            alt="callend button"
+            class="content__callendar-btn-left content__left-menu-item header__pc-icon"
+          />
+          <img
+            src="./imgs/bar-icons/User.svg"
+            alt="user button"
+            class="content__user-btn content__left-menu-item header__pc-icon"
+          />
+          <img
+            src="./imgs/bar-icons/List.svg"
+            alt="burger button"
+            class="content__burger-btn content__left-menu-item header__pc-icon"
+          />
+          <img
+            src="./imgs/bar-icons/Clock.svg"
+            alt="clock button"
+            class="content__clock-btn content__left-menu-item header__pc-icon"
+          />
+          <img
+            src="./imgs/bar-icons/Files.svg"
+            alt="files button"
+            class="content__files-btn content__left-menu-item header__pc-icon"
+          />
+          <img
+            src="./imgs/bar-icons/Settings.svg  "
+            alt="settings button"
+            class="content__settings-btn content__left-menu-item header__pc-icon"
+          />
+        </section>
+        <section class="header__user-section">
+          <img
+            src="./imgs/user.png"
+            alt="image of user"
+            class="header__user-img"
+          />
+          <img
+            src="./imgs/logo-arrow.svg"
+            alt="user"
+            class="header__user-arrow"
+          />
+        </section>
+        <section class="header__notif-section">
+          <button class="header__notif">
+            <img
+              src="./imgs/Bell.svg"
+              alt="notification"
+              class="header__notif-img"
+            />
+          </button>
+        </section>
+        <button class="header__burger-grid">
+          <img
+            src="./imgs/Grid.svg"
+            alt="menu button"
+            class="header__burger-img"
+          />
+        </button>
+      </header>
+      <article class="content">
+        <div class="content__ui">
+          <section class="content__left-bar">
+            <div class="content__left-bar-true">
+              <section class="content__left-bar-top">
+                <img
+                  src="./imgs/bar-icons/Calendar.svg"
+                  alt="callend button"
+                  class="content__callendar-btn-left content__left-menu-item"
+                />
+                <img
+                  src="./imgs/bar-icons/User.svg"
+                  alt="user button"
+                  class="content__user-btn content__left-menu-item"
+                />
+                <img
+                  src="./imgs/bar-icons/List.svg"
+                  alt="burger button"
+                  class="content__burger-btn content__left-menu-item"
+                />
+                <img
+                  src="./imgs/bar-icons/Clock.svg"
+                  alt="clock button"
+                  class="content__clock-btn content__left-menu-item"
+                />
+                <img
+                  src="./imgs/bar-icons/Files.svg"
+                  alt="files button"
+                  class="content__files-btn content__left-menu-item"
+                />
+                <img
+                  src="./imgs/bar-icons/Settings.svg  "
+                  alt="settings button"
+                  class="content__settings-btn content__left-menu-item"
+                />
+              </section>
+              <section class="content__left-bar-bottom">
+                <img
+                  src="./imgs/bar-icons/Log out.svg"
+                  alt="quit button"
+                  class="content__quit content__left-menu-item"
+                />
+              </section>
+            </div>
+          </section>
+          <section class="content__middle">
+            <h1 class="content__title">Project Tasks</h1>
+            <button class="content__callendar-btn">
+              May 2022
+              <img
+                src="./imgs/logo-arrow.svg"
+                alt="button"
+                class="content__callendar-btn-img"
+              />
+            </button>
+          </section>
+          <section class="content__right-bar">
+            <div class="content__right-bar-true">
+              <div class="content__right-top-texts">
+                <div class="content__right-title">
+                  <h1 class="content__right-title">Upcoming</h1>
+                  <h2 class="content__right-title2">[date of short task]</h2>
+                </div>
+                <img
+                  width="80px"
+                  height="100%"
+                  class="content__right-burger"
+                  src="./imgs/Menu.png"
+                  alt="burger in right section"
+                />
+              </div>
+              <div class="content__right-hour">
+                <p class="content__right-hour-hour">[hour]</p>
+                <span class="content__right-hour-span"></span>
+                <div class="content__right-hour-title">
+                  <p class="content__right-hour-category">[category]</p>
+                  <p class="content__right-hour-title">[title]</p>
+                </div>
+              </div>
+              <div class="content__right-tools">
+                <p class="content__right-tools-title">Tools:</p>
+                <img
+                  src="./imgs/tools/Google Meet.png"
+                  alt="icon"
+                  class="content__right-tools-img"
+                />
+                <img
+                  src="./imgs/tools/Figma.png"
+                  alt="icon"
+                  class="content__right-tools-img"
+                />
+                <img
+                  src="./imgs/tools/Slack.png"
+                  alt="icon"
+                  class="content__right-tools-img"
+                />
+                <img
+                  src="./imgs/tools/Invision.png"
+                  alt="icon"
+                  class="content__right-tools-img"
+                />
+              </div>
+              <div class="content__right-subtasks">
+                <p class="content__right-subtasks-title">Subtaks:</p>
+                <section class="content__right-task-all">
+                  <p class="content__right-task-title">Example title[1]</p>
+                  <div class="content__right-task-checkbox">
+                    <img
+                      src="./imgs/Check.png"
+                      alt="checkbox"
+                      class="content__right-task-checkbox-img"
+                    />
+                  </div>
+                </section>
+                <section class="content__right-task-all">
+                  <p class="content__right-task-title">Example title[2]</p>
+                  <div class="content__right-task-checkbox">
+                    <img
+                      src="./imgs/Check.png"
+                      alt="checkbox"
+                      class="content__right-task-checkbox-img"
+                    />
+                  </div>
+                </section>
+                <section class="content__right-task-all">
+                  <p class="content__right-task-title">Example title[2]</p>
+                  <div class="content__right-task-checkbox">
+                    <img
+                      src="./imgs/Check.png"
+                      alt="checkbox"
+                      class="content__right-task-checkbox-img"
+                    />
+                  </div>
+                </section>
+                <section class="content__right-task-all">
+                  <p class="content__right-task-title">Example title[2]</p>
+                  <div class="content__right-task-checkbox">
+                    <img
+                      src="./imgs/Check.png"
+                      alt="checkbox"
+                      class="content__right-task-checkbox-img"
+                    />
+                  </div>
+                </section>
+              </div>
+            </div>
+          </section>
+        </div>
+        <section class="content__field">
+          <section class="content__field-content">
+            <div class="day1"></div>
+          </section>
+        </section>
+      </article>
+    </div>
+    <script defer src="/dist/00/js/bundle.js"></script>
+  </body>
+</html>

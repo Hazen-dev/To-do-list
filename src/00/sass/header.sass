@@ -1,0 +1,57 @@
+@import 'var'
+.container // CONTENT OF PAGE
+    @include margin(true, false)
+    height: 100vh
+.header //HEADER
+    display: flex
+    background: white
+    align-content: center
+    max-height: 4rem
+    justify-content: center
+    align-items: center
+    &__logo //img
+    &__notif //btn
+        display: flex
+        justify-content: center
+        align-items: center
+        background: $button-back
+        border: none
+        border-radius: 15px
+        padding: 1.3rem
+        transition: 1s
+    &__notif:hover
+        transform: scale(0.9)
+        background: $button-darker
+    &__notif-section // div over the notif img (ussless)
+    &__header__user-img //img of user
+    &__user-section
+        display: flex
+        align-items: center
+    &__user-arrow //arrow of img
+        margin-left: .3rem
+    &__burger-grid
+        transition: 1s
+        background: $button-back
+        border: none
+        border-radius: 25px
+    &__burger-grid:hover
+        transform: scale(0.9)
+        background: $button-darker
+    &__search-bar
+        border: none
+        background: $button-back
+        border-radius: 15px
+        text-align: start
+        line-height: 1px !important
+        letter-spacing: 2px
+    &__search-bar::placeholder
+
+    &__pc-menu
+        margin-left: 2rem
+        display: flex
+        align-items: center
+    &__pc-icon
+        margin: 0 1rem
+@media only screen and (min-width: 1920px) //PC
+    .header
+        padding: 1.2rem 0 !important
