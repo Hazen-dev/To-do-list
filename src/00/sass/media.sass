@@ -18,6 +18,10 @@
 
         &__pc-menu
             display: none
+    .content__tasks
+        margin-left: 0
+    .content__field-content
+        margin-left: 0
     #header__search-bar //font awansome important
         padding: 1.2rem 0 1.2rem 0
         display: none
@@ -35,6 +39,8 @@
             display: none
         &__right-bar
             display: none
+            transition: .7s
+            opacity: 1
 @media only screen and (min-width: 375px) and (min-height: 752px) //Iphone X
 
 @media only screen and (min-width: 768px) and (min-height: 663px) //Tablets
@@ -61,7 +67,8 @@
         //CONTENT
 
     .content
-
+        &__add
+            //margin-top: 0rem
         &__ui
             grid-template-columns: auto 4fr 2fr
         &__left-bar
@@ -71,14 +78,18 @@
         &__left-bar-true
         &__right-bar
             //display: block
+    .content__tasks
+        margin-left: 4rem
+    .content__field-content
+        margin-left: 4rem
 @media only screen and (min-width: 1360px) and (min-height: 803px) //Laptops
     .content
-        &__add
-            display: flex
+
 @media only screen and (min-width: 1920px) //PC
     .header
         &__pc-menu
             display: flex
+            margin-top: 74vh
 
     .content
         &__title
@@ -111,3 +122,16 @@
     .content
         &__right-bar
             display: block
+
+@media only screen and (min-width: 200px) and (min-height: 300px) and (max-width: 1200px)// starting options
+    .content
+        &__right-hour
+            max-width: 99999rem
+    .content__right-bar
+        display: block
+        margin: 0 auto
+        width: 80%
+        position: fixed
+        left: 10vw
+        top: 8rem
+        height: 70vh

@@ -1,0 +1,105 @@
+@import 'var'
+.add-task
+    background: #ffffff
+    border-radius: 30px
+    box-shadow: 4px 4px 44px -22px #707070
+    width: 80%
+    //height: 50vh
+    position: fixed
+    left: 10%
+    right: 10%
+    top: 25vh
+    z-index: 1000
+    display: none
+.color__section
+    display: flex
+    width: fit-content
+    margin: 0 auto
+.task
+    display: flex
+    align-items: center
+    &__color-text
+        font-size: 3rem
+        text-align: center
+        font-weight: 600
+        margin-bottom: 1rem
+    &__color-content
+        display: flex
+        margin: 0 1.4rem
+    &__color-content-text
+        font-size: 1.7rem
+        margin: 1rem
+        margin-right: .4rem
+    &__textarea
+        border: none
+        background: $button-back
+        width: 70%
+        font-family: 'Poppins', sans-serif
+        border-radius: 10px
+        font-size: 1.4rem
+    &__content
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-top: 1rem
+
+    &__dates
+        margin: 0 auto
+        margin-top: 2rem
+        width: fit-content
+        padding-bottom: 2rem
+        display: flex
+        flex-wrap: wrap
+    &__date-section
+        margin: 0 2rem
+        text-align: center
+        font-weight: 600
+    &__date-start // 1 and 2 calledar obj
+    &__date-end
+    &__date-callendar
+        height: 2rem
+        border-radius: 30px
+        border: none
+        font-family: 'Poppins', sans-serif
+        padding: 0.5rem 1rem
+    &__ok-t
+        border: none
+        padding: 1.2rem 1rem
+        border-radius: 15px
+        margin: 0 0
+        width: 100%
+        font-size: 2rem
+        font-weight: 600
+        background: white
+    &__ok
+        
+
+
+@media only screen and (min-width: 200px) and (min-height: 300px) // starting options
+    .color__section
+        flex-wrap: wrap
+        justify-content: center
+    .add-task
+        top: 6%
+    .task
+        &__dates
+            justify-content: center
+
+@media only screen and (min-width: 1160px) and (min-height: 700px) //Laptops
+    .add-task
+        width: 40%
+        //height: 50vh
+        left: 30%
+        right: 30%
+        top: 15%
+
+    .task
+        &__textarea
+            height: 6rem
+@media only screen and (min-width: 768px) and (min-height: 1024px) //Laptops
+    .add-task
+        top: 22%
+
+@media only screen and (min-width: 1920px) //PC
+    .add-task
+        top: 25%

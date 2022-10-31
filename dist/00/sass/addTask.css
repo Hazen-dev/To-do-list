@@ -1,0 +1,117 @@
+.add-task {
+  background: #ffffff;
+  border-radius: 30px;
+  box-shadow: 4px 4px 44px -22px #707070;
+  width: 80%;
+  position: fixed;
+  left: 10%;
+  right: 10%;
+  top: 25vh;
+  z-index: 1000;
+  display: none;
+}
+
+.color__section {
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+}
+.task__color-text {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.task__color-content {
+  display: flex;
+  margin: 0 1.4rem;
+}
+.task__color-content-text {
+  font-size: 1.7rem;
+  margin: 1rem;
+  margin-right: 0.4rem;
+}
+.task__textarea {
+  border: none;
+  background: #F8F9FB;
+  width: 70%;
+  font-family: "Poppins", sans-serif;
+  border-radius: 10px;
+  font-size: 1.4rem;
+}
+.task__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+.task__dates {
+  margin: 0 auto;
+  margin-top: 2rem;
+  width: fit-content;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.task__date-section {
+  margin: 0 2rem;
+  text-align: center;
+  font-weight: 600;
+}
+.task__date-callendar {
+  height: 2rem;
+  border-radius: 30px;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  padding: 0.5rem 1rem;
+}
+.task__ok-t {
+  border: none;
+  padding: 1.2rem 1rem;
+  border-radius: 15px;
+  margin: 0 0;
+  width: 100%;
+  font-size: 2rem;
+  font-weight: 600;
+  background: white;
+}
+@media only screen and (min-width: 200px) and (min-height: 300px) {
+  .color__section {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .add-task {
+    top: 6%;
+  }
+  .task__dates {
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 1160px) and (min-height: 700px) {
+  .add-task {
+    width: 40%;
+    left: 30%;
+    right: 30%;
+    top: 15%;
+  }
+  .task__textarea {
+    height: 6rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-height: 1024px) {
+  .add-task {
+    top: 22%;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .add-task {
+    top: 25%;
+  }
+}
+
+/*# sourceMappingURL=addTask.css.map */

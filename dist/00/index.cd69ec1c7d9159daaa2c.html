@@ -141,15 +141,16 @@
             </div>
           </section>
           <section class="content__middle">
-            <h1 class="content__title">Project Tasks</h1>
-            <button class="content__callendar-btn">
-              May 2022
-              <img
-                src="./imgs/logo-arrow.svg"
-                alt="button"
-                class="content__callendar-btn-img"
-              />
-            </button>
+            <h1 class="content__title">
+              Project Tasks
+              <div
+                class="content__add content__add-top"
+                style="display: flex; margin: 0"
+              >
+                <p style="margin: 0; font-size: 1.2rem">ADD</p>
+              </div>
+            </h1>
+            <button class="content__callendar-btn">Paź 2022</button>
             <div class="content__add">
               <p style="margin: 0; font-size: 1.2rem">ADD</p>
             </div>
@@ -159,7 +160,9 @@
               <div class="content__right-top-texts">
                 <div class="content__right-title">
                   <h1 class="content__right-title">Upcoming</h1>
-                  <h2 class="content__right-title2">[date of short task]</h2>
+                  <h2 class="content__right-title2">
+                    click on any task to get informations
+                  </h2>
                 </div>
                 <img
                   width="80px"
@@ -170,11 +173,11 @@
                 />
               </div>
               <div class="content__right-hour">
-                <p class="content__right-hour-hour">[hour]</p>
+                <p class="content__right-hour-hour">Select any task</p>
                 <span class="content__right-hour-span"></span>
                 <div class="content__right-hour-title">
-                  <p class="content__right-hour-category">[category]</p>
-                  <p class="content__right-hour-title">[title]</p>
+                  <!-- <p class="content__right-hour-category">[category]</p> -->
+                  <!-- <p class="content__right-hour-title">[title]</p> -->
                 </div>
               </div>
               <div class="content__right-tools">
@@ -200,7 +203,7 @@
                   class="content__right-tools-img"
                 />
               </div>
-              <div class="content__right-subtasks">
+              <!-- <div class="content__right-subtasks">
                 <p class="content__right-subtasks-title">Subtaks:</p>
                 <section class="content__right-task-all">
                   <p class="content__right-task-title">Example title[1]</p>
@@ -242,7 +245,7 @@
                     />
                   </div>
                 </section>
-              </div>
+              </div> -->
             </div>
           </section>
         </div>
@@ -250,15 +253,76 @@
           <section class="content__field-content">
             <!--  -->
           </section>
-          <div class="content__tasks">
-            <div class="task task--1">
-              <p class="task__text">Cleaning room</p>
+          <div class="content__tasks"></div>
+        </section>
+        <div class="add-task">
+          <p class="task__color-text">Select your color</p>
+          <div class="color__section">
+            <div class="task__color-content">
+              <p class="task__color-content-text">Red</p>
+              <div class="container-checkbox">
+                <input
+                  type="radio"
+                  value="red"
+                  class="checkbox checkbox-style"
+                  name="color"
+                />
+              </div>
             </div>
-            <div class="task task--2">
-              <p class="task__text">Cleaning room 2</p>
+            <div class="task__color-content">
+              <p class="task__color-content-text">Blue</p>
+              <div class="container-checkbox">
+                <input
+                  type="radio"
+                  value="blue"
+                  class="checkbox checkbox-style"
+                  name="color"
+                />
+              </div>
+            </div>
+            <div class="task__color-content">
+              <p class="task__color-content-text">Yellow</p>
+              <div class="container-checkbox">
+                <input
+                  type="radio"
+                  value="yellow"
+                  class="checkbox checkbox-style"
+                  name="color"
+                />
+              </div>
             </div>
           </div>
-        </section>
+          <section class="task__content">
+            <textarea
+              name="content"
+              class="task__textarea"
+              cols="20"
+              rows="1"
+              placeholder="Type title of task..."
+            ></textarea>
+          </section>
+          <section class="task__dates">
+            <div class="task__date-section">
+              <p>Start date:</p>
+              <input
+                type="date"
+                name="start-date"
+                class="task__date-start task__date-callendar"
+              />
+            </div>
+            <div class="task__date-section">
+              <p>End date:</p>
+              <input
+                type="date"
+                name="end-date"
+                class="task__date-end task__date-callendar"
+              />
+            </div>
+          </section>
+          <section class="task__ok">
+            <button class="task__ok-t">Ok</button>
+          </section>
+        </div>
       </article>
     </div>
     <script defer src="/dist/00/js/bundle.js"></script>

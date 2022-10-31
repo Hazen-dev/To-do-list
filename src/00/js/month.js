@@ -1,4 +1,5 @@
 /* eslint-disable no-plusplus */
+
 const date = new Date();
 const Monthdate = new Date();
 const days = document.getElementsByClassName('content__field-content')[0]; // main days all
@@ -10,6 +11,7 @@ function getDayName(dateStr, locale) {
 }
 
 function createElementOne() {
+  // one factory
   const e = document.createElement('div'); // create elements
   const p1 = document.createElement('p');
   const p2 = document.createElement('p');
@@ -32,24 +34,25 @@ function createElement() {
     date.getMonth() + 1,
     0
   ).getDate(); // getting days of months
-
+  //
   //
   //
   //
   Monthdate.setDate(Monthdate.getDate() - 1); // equal days
   for (let index = 0; index < thiMonthsDaysCount; index++) {
-    // month day innacuration (30 31 29 28)
-    console.log(Monthdate);
+    // month day in iteration (30 31 29 28)
+
     const oneEl = createElementOne();
     oneEl.children[1].innerHTML = index + 1;
     oneEl.children[0].innerHTML = getDayName(Monthdate, 'en-us').slice(0, 3);
 
-    days.appendChild(oneEl);
-    Monthdate.setDate(Monthdate.getDate() + 1); // increment day
+    days.appendChild(oneEl); // iteration to append childs
+    Monthdate.setDate(Monthdate.getDate() + 1); // increment days
   }
 }
 
 export default function month() {
+  // set month
   // export function
-  createElement();
+  createElement(); // full function
 }
